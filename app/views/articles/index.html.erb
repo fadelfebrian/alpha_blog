@@ -1,0 +1,32 @@
+<h2> All articles </h2>
+
+<p>
+    <%= link_to 'Create New Article',new_article_path %>
+</p>
+<table border=1>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</%#>
+        </tr>
+    </thead>
+
+    <tbody>
+    <% @article.each do |value|  %>
+        <tr>  
+            <td><%= value.title  %> </td>
+            <td><%= value.description  %> </td>
+            <td><%= link_to 'Edit',edit_article_path(value) %> <%= link_to 'Show',article_path(value) %><%= link_to 'Delete',article_path(value),method: :delete,data:{confirm:"Are You Sure?"}%></td>
+           
+
+        </tr>
+
+
+
+ <% end  %>
+    </tbody>
+
+</table>
+
+ 

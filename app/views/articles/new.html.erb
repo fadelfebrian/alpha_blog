@@ -1,17 +1,5 @@
-<h3> Create your article </h3>
+<h3> Add username </h3>
 
-<%= form_for @article do |f| %>
-<p>
-    <%= f.label:title%><br>
-    <%= f.text_field:title %>
+<%= link_to 'Home Page', root_path %>
 
-</p>
-<p>
-    <%= f.label:description%><br>
-    <%= f.text_field:description %>
-</p>
-<p>
-    <%= f.submit %>
-</p>
-
-<% end %>
+<%= render 'form' %>
