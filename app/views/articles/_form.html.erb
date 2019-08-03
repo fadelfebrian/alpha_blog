@@ -1,13 +1,11 @@
-<ul>
+
     <% if @article.errors.any? %>
-
+    <ul>
     <% @article.errors.full_messages.each do |msg|%>
-
-    <li> <%= msg %> </li>
-
+        <li> <%= msg %> </li>
+    <% end %>
     <% end %>
 </ul>
-<% end %>
 
 <%= form_for @article do |f| %>
 <p>
@@ -24,3 +22,4 @@
 </p>
 
 <% end %>
+
